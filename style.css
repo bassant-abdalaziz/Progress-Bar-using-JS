@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.container {
+    max-width: 350px;
+    width: 100%;
+    padding: 80px 0;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: rgb(124, 124, 124);
+    background-color: white;
+    transition: 0.3s;
+}
+
+.active {
+    border: 3px solid rgb(23, 91, 193);
+}
+
+.progressLine {
+    background-color: #eee;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    top: 19px;
+    z-index: -1;
+}
+
+.line {
+    height: 100%;
+    position: absolute;
+    background-color: rgb(23, 91, 193);
+    transition: 0.5s;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 50px;
+}
+
+button {
+    background-color: rgb(23, 91, 193);
+    border: none;
+    outline: none;
+    font-size: 17px;
+    color: white;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: rgb(142, 148, 157);
+    cursor: not-allowed;
+    transition: 1s;
+}
